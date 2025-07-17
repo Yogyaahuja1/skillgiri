@@ -1,0 +1,195 @@
+/* RESET & BASE STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0e0e0e;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #121212;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  border-bottom: 1px solid #333;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 40px;
+}
+
+h1 {
+  color: #ff5722;
+  font-size: 1.8rem;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.links li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.links li a:hover {
+  color: #ffffff;
+}
+
+.sign{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.login-btn, .sign-btn {
+    width: 80px;
+    height: 35px;
+  background-color: #ff5722;
+  border: none;
+  padding: 8px 18px;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover, .sign-btn:hover {
+  background-color: #e64a19;
+}
+.sign-btn{
+    width: 100px;
+    height: 50px;
+    
+}
+/* HERO SECTION */
+.signup {
+  padding: 4rem 3rem;
+  text-align: left;
+  max-width: 700px;
+}
+
+.signup h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.signup p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.promo {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.promo img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* OFFERED FEATURES */
+.offered {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem;
+  background-color: #1c1c1c;
+  text-align: center;
+}
+
+.offered img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.offered p {
+  color: #ffab40;
+  font-weight: 600;
+}
+
+/* WHY CHOOSE US */
+.why-choose-us {
+  background-color: #111;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ff5722;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.feature-box {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+.feature-box h3 {
+  color: #f5a623;
+  margin-bottom: 1rem;
+}
+
+.feature-box p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #121212;
+  color: #aaa;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #333;
+}
+
+.footer-left a {
+  color: #aaa;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.footer-left a:hover {
+  color: white;
+}
