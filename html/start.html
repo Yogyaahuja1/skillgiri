@@ -33,8 +33,20 @@
             <p>Time to learn real skills</p>
          </div> -->
     </div>
-    <div class="sign">
-        <a href="/signup"><button class="sign-btn">sign in</button></a>
+        <!-- <a href="/signup"><button class="sign-btn">sign in</button></a> -->
+         <button onclick="open_page()" class="sign-btn">sign in</button>
+         <div class="modal">
+            <div class="modal-content">
+                <h2>create your account</h2>
+                <form action="/api/auth/signup" type="submit" class="signin-form">
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="email" placeholder="Email ID" name="email" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <button class="submit">submit</button>
+                    <h3 >will share you otp</h3>
+                    <button onclick="close_page()">close</button>
+                </form>
+            </div>
          </div>
 
     
@@ -87,6 +99,6 @@
         <div class="footer-right">Copyright © 2025 Coding Parivaar Limited All rights reserved.</div>
     </footer>
 
-
+    <script src="../js/start.js"></script>
 </body>
 </html>
