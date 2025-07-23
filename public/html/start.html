@@ -16,7 +16,7 @@
         <ul class="links">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Courses</a></li>
+            <li><a href="./courses.html">Courses</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
         <div class="login">
@@ -27,12 +27,12 @@
     <div class="signup">
          <h2>Learn Digital Skills<br> with SKILLGIRI</h2>
          <p>Unlock your potential and gain in-demand digital skills through our expert-led courses and hands-on learning experiences.</p>
-         
+    </div>
          <!-- <div class="promo">
             <img src="main.jpg" alt="teacher">
             <p>Time to learn real skills</p>
          </div> -->
-    </div>
+    <div class="signin-div">
         <!-- <a href="/signup"><button class="sign-btn">sign in</button></a> -->
          <button onclick="open_page()" class="sign-btn">sign in</button>
          <div class="modal">
@@ -42,12 +42,14 @@
                     <input type="text" name="name" placeholder="Name">
                     <input type="email" placeholder="Email ID" name="email" required>
                     <input type="tel" name="phone" placeholder="Phone Number" required>
-                    <button class="submit">submit</button>
+                    <input type="hidden" name="referredId" id="referredId">
+                    <button class="submit" type="submit">submit</button>
                     <h3 >will share you otp</h3>
                     <button onclick="close_page()">close</button>
                 </form>
             </div>
          </div>
+    </div>
 
     
     <div class="offered">

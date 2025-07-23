@@ -12,6 +12,12 @@ body {
   line-height: 1.6;
 }
 
+.signin-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
 /* NAVBAR */
 .navbar {
   background-color: #121212;
