@@ -2,7 +2,7 @@ const express=require('express');
 const dotenv=require('dotenv');
 const path=require('path');
 const connectdb= require('./config/db');
-const authRoutes = require('./routes/authRoutes');
+const authRoutes = require('./routes/authroutes');
 const logger=require('./middleware/logger');
 
 dotenv.config();

@@ -1,7 +1,7 @@
 const ref = new URLSearchParams(window.location.search).get('ref');
 
-function open_page() {
-    document.querySelector(".modal").style.display = 'flex';
+function open_signup() {
+    document.querySelector(".signup-modal").style.display = 'flex';
 
     // assign referral ID when modal (signup form) is opened
     if (ref) {
@@ -13,6 +13,15 @@ function open_page() {
     }
 }
 
-function close_page() {
-    document.querySelector(".modal").style.display = 'none';
+function close_signup() {
+    document.querySelector(".signup-modal").style.display = 'none';
+}
+
+
+function open_login() {
+  document.querySelector(".login-modal").style.display = 'flex';
+}
+
+function close_login(id) {
+    document.querySelector(".login-modal").style.display = 'none';
 }

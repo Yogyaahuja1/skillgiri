@@ -14,13 +14,29 @@
         </div>
         <h1>SKILLGIRI</h1>
         <ul class="links">
-            <li><a href="#">Home</a></li>
+            <li><a href="./start.html">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="./courses.html">Courses</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="./contact.html">Contact</a></li>
         </ul>
-        <div class="login">
-            <a href="/login"><button class="login-btn">Log in</button></a>
+        <!-- <div class="login">
+            
+            <a href="./login.html"><button class="login-btn">Log in</button></a>
+        </div> -->
+        <!-- Login Modal -->
+        <div class="login-div">
+            <button onclick="open_login()" class="login-btn">login</button>
+            <div class="login-modal">
+                <div class="modal-content">
+                    <h2>Log In</h2>
+                    <form action="/api/auth/login" method="post" class="signin-form">
+                    <input type="email" name="email" placeholder="Email ID" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button class="submit" type="submit">Login</button>
+                    <button type="button" onclick="close_login()">Close</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </nav>
     <img src="../images/pic.png" alt="company" class="main">
@@ -34,8 +50,8 @@
          </div> -->
     <div class="signin-div">
         <!-- <a href="/signup"><button class="sign-btn">sign in</button></a> -->
-         <button onclick="open_page()" class="sign-btn">sign in</button>
-         <div class="modal">
+         <button onclick="open_signup()" class="sign-btn">sign in</button>
+         <div class="signup-modal">
             <div class="modal-content">
                 <h2>create your account</h2>
                 <form action="/api/auth/signup" method="post" class="signin-form">
@@ -45,7 +61,7 @@
                     <input type="hidden" name="referredId" id="referredId">
                     <button class="submit" type="submit">submit</button>
                     <h3 >will share you otp</h3>
-                    <button onclick="close_page()">close</button>
+                    <button onclick="close_signup()">close</button>
                 </form>
             </div>
          </div>

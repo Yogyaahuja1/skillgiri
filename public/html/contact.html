@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+</head>
+<link rel="stylesheet" href="../css/contact.css">
+<body>
+
+    <nav class="navbar">
+        <div class="logo-section">
+            <img src="../images/logo.png" alt="Skillgiri Logo" class="logo">
+        </div>
+        <h1>SKILLGIRI</h1>
+        <ul class="links">
+            <li><a href="./start.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="./courses.html">Courses</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+        <div class="login">
+            <a href="./login.html"><button class="login-btn">Log in</button></a>
+        </div>
+    </nav>
+
+    <div class="contact">
+        <div class="left-container">
+             <h1>contact us</h1>
+            <p>Have questions, feedback, or want to collaborate?</p>
+            <p>reach out via mail <a href="contact@skillgiri.com">contact@skillgiri.com</a> for any issues</p>
+          
+
+  <p>Need help choosing the right course for your skill level or career path? Just drop us a message. We’re happy to guide you!</p>
+
+  <p>If you’re facing technical issues while using the site — login problems, course access issues, or payment errors — contact us directly through the form or email.</p>
+
+  <p>We typically respond within 24 hours on weekdays.</p>
+        </div>
+
+    <div class="right-container">
+        <form action="/api/contact" method="post" class="form">
+
+            <label for="name">Name</label>
+                <input type="text" name="name" placeholder="Your Name" id="name">
+            
+
+             <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Your Mail" id="email">
+            
+
+             <label for="Number">Phone</label>
+                <input type="tel" name="tel" placeholder="Your Number" id="Number">
+            
+            <button class="submit">submit</button>
+        </form>
+        </div>
+    </div>
+</body>
+</html>
