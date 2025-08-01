@@ -2,7 +2,7 @@ const user =require('../models/user');
 
 const signup= async (req,res) =>{
     console.log("body is",req.body);
-    const {name,email,phone,referredId}=req.body;
+    const {name,email,phone,password,referredId}=req.body;
 
     try{
         const exits=await user.findOne({email:email});
@@ -10,7 +10,7 @@ const signup= async (req,res) =>{
 
         else 
         {
-            const newUser=new user({name,email,phone,referredId:referredId||null});
+            const newUser=new user({name,email,phone,password,referredId:referredId||null});
             await newUser.save();
             console.log("user saved",newUser);
              if (referredId) {
@@ -28,4 +28,5 @@ const signup= async (req,res) =>{
   }
     };
     module.exports=signup;
+
 

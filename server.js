@@ -4,6 +4,9 @@ const path=require('path');
 const connectdb= require('./config/db');
 const authRoutes = require('./routes/authroutes');
 const logger=require('./middleware/logger');
+const userroutes=require("./routes/userroutes");
+const loginroute=require("./routes/loginroute")
+
 
 dotenv.config();
 connectdb();
@@ -16,6 +19,9 @@ app.use(express.static(path.join(__dirname, 'public'))); // Serves frontend file
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use(userroutes);
+app.use(loginroute);
+
 
 // Start server
 const PORT = process.env.PORT || 300;

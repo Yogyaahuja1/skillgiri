@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <header>
+        <div class="logo-section">
+            <img src="../images/logo.png" alt="Skillgiri Logo" class="logo">
+        </div>
+         <h1>SKILLGIRI</h1>
+        <button class="log-out">log-out</button>
+    </header>
+    <div id="user-info"></div>
+    <div class="container">
+        <div class="nav-bar">
+            <ul>
+                <li><a href="">Your-courses</a></li>
+                <li><a href="">Profile</a></li>
+                <li><a href="">online-courses</a></li>
+                <li><a href="">offline-courses</a></li>
+                <li><a href="">purchase-history</a></li>
+                <li><a href="">refer</a></li>
+                <li><a href="">settings</a></li>
+            </ul>
+        </div>
+        <div class="info">
+            <div class="slide">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+    
+    
+    <script>
+        const token=localStorage.getItem('token');
+        const userInfoDiv=document.getElementById('user-info');
+        const coursesDiv=document.getElementById('courses');
+        const logout=document.querySelector(".log-out");
+        async function getDashboardData(){
+            try{
+                const response=await fetch("/user-info",
+                    {
+                        method:'GET',
+                        headers:
+                        {
+                            'Authorization':'Bearer '+token
+                        }
+                    }
+                )
+               if (!response.ok) {
+                throw new Error('Access denied');
+                }
+                const data = await response.json();
+                userInfoDiv.innerText =  'Welcome: ' + (data.email).split("@")[0];
+            }catch (err) {
+                userInfoDiv.innerText = err.message;
+            }
+        }
+        getDashboardData();
+        logout.addEventListener("click",()=>{
+             localStorage.removeItem('token');
+             window.location.href='/html/start.html';
+        })
+    </script>
+</body>
+</html>

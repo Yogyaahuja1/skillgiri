@@ -29,12 +29,13 @@
             <div class="login-modal">
                 <div class="modal-content">
                     <h2>Log In</h2>
-                    <form action="/api/auth/login" method="post" class="signin-form">
-                    <input type="email" name="email" placeholder="Email ID" required>
-                    <input type="password" name="password" placeholder="Password" required>
+                    <form id="login-page">
+                    <input type="email" name="email" placeholder="Email ID" id="email" required>
+                    <input type="password" name="password" placeholder="Password" id="password">
                     <button class="submit" type="submit">Login</button>
                     <button type="button" onclick="close_login()">Close</button>
                     </form>
+                    <div id="message"></div>
                 </div>
             </div>
         </div>
@@ -58,11 +59,13 @@
                     <input type="text" name="name" placeholder="Name">
                     <input type="email" placeholder="Email ID" name="email" required>
                     <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <input type="password" name="password" placeholder="create-password" required>
                     <input type="hidden" name="referredId" id="referredId">
                     <button class="submit" type="submit">submit</button>
                     <h3 >will share you otp</h3>
                     <button onclick="close_signup()">close</button>
                 </form>
+                
             </div>
          </div>
     </div>
@@ -118,5 +121,34 @@
     </footer>
 
     <script src="../js/start.js"></script>
+    <script>
+        const login=document.querySelector("#login-page");
+
+        login.addEventListener('submit',async (e)=>{
+
+            e.preventDefault();
+            const email=document.getElementById("email").value;
+            const password=document.getElementById('password').value;
+            const messagediv=document.getElementById('message');
+            const response=await fetch('http://localhost:300/login',
+                {
+                    method:'post',
+                    headers:{'Content-Type':'application/json'},
+                    body:JSON.stringify({email,password})
+                }
+            );
+            const data=await response.json();
+            const token=data.token;
+             localStorage.setItem('token',token);
+             if(response.ok){
+                messagediv.innerText='Login sucesful';
+              window.location.href = 'html/dashboard.html';
+                await fetch()
+              }
+             else {
+            messagediv.innerText = data.error || 'Login failed';
+        }
+        })
+    </script>
 </body>
 </html>
